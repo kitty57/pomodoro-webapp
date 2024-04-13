@@ -7,7 +7,7 @@ def local_css(file_name):
 
 local_css("styles.css")
 
-st.write("""
+st.caption("""
 # The Pomodoro App
 
 Let's do some focus work in data science with this app.
