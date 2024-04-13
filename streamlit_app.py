@@ -30,6 +30,7 @@ if button_clicked:
             selected_time_seconds -= 1
             if stop_checkbox:
                 stop_button_clicked = True
+                st.error("You gave up!")
                 
         
         if not stop_button_clicked and not stop_checkbox:
