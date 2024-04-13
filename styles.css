@@ -1,7 +1,10 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url('https://wallpapercave.com/wp/wp7039345.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 button {
     border: none;
