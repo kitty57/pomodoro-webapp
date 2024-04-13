@@ -29,17 +29,23 @@ if button_clicked:
             st.header(f"⏳ {timer}")
             time.sleep(1)
             selected_time_seconds -= 1
+            if st.button("Stop"):
+                stop_button_clicked = True
         
-        st.success(f"🔔 {selected_time} minutes is over! Time for a break!")
-        time.sleep(2)  # Wait for 2 seconds before starting the break timer
-        
-        break_time = 5 * 60  # 5 minutes break time
-        while break_time and not stop_button_clicked:
-            mins, secs = divmod(break_time, 60)
-            timer = '{:02d}:{:02d}'.format(mins, secs)
-            st.header(f"⏳ {timer}")
-            time.sleep(1)
-            break_time -= 1
-        
-        st.error("⏰ 5 minute break is over!")
-        time.sleep(2)  # Wait for 2 seconds before allowing to start another Pomodoro session
+        if not stop_button_clicked:
+            st.success(f"🔔 {selected_time} minutes is over! Time for a break!")
+            time.sleep(2)  # Wait for 2 seconds before starting the break timer
+            
+            break_time = 5 * 60  # 5 minutes break time
+            while break_time and not stop_button_clicked:
+                mins, secs = divmod(break_time, 60)
+                timer = '{:02d}:{:02d}'.format(mins, secs)
+                st.header(f"⏳ {timer}")
+                time.sleep(1)
+                break_time -= 1
+                if st.button("Stop"):
+                    stop_button_clicked = True
+            
+            if not stop_button_clicked:
+                st.error("⏰ 5 minute break is over!")
+                time.sleep(2)  # Wait for 2 seconds before allowing to start another Pomodoro session
