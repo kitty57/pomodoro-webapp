@@ -16,11 +16,14 @@ Let's do some focus work in data science with this app.
 selected_time = st.selectbox("Select time duration for Pomodoro session:", [1, 5, 10, 15, 20, 25, 30])
 selected_time_seconds = selected_time * 60
 
-button_clicked = st.button("Start",key="start_button")
+button_clicked = st.button("Start", key="start_button")
 stop_button_clicked = False
 
 if button_clicked:
-    with st.empty():
+    start_container = st.empty()
+    stop_container = st.empty()
+    
+    with start_container:
         while selected_time_seconds and not stop_button_clicked:
             mins, secs = divmod(selected_time_seconds, 60)
             timer = '{:02d}:{:02d}'.format(mins, secs)
@@ -28,11 +31,11 @@ if button_clicked:
             time.sleep(1)
             selected_time_seconds -= 1
             st.success(f"🔔 {selected_time} minutes is over! Time for a break!")
-            if st.button("Stop",key="stop_button"):
+            if st.button("Stop", key="stop_button"):
                 stop_button_clicked = True
-
+    
     break_time = 5 * 60
-    with st.empty():
+    with stop_container:
         while break_time and not stop_button_clicked:
             mins, secs = divmod(break_time, 60)
             timer = '{:02d}:{:02d}'.format(mins, secs)
@@ -40,5 +43,5 @@ if button_clicked:
             time.sleep(1)
             break_time -= 1
             st.error("⏰ 5 minute break is over!")
-            if st.button("i don't want break",key="stop_button_break"):
+            if st.button("I don't want break", key="stop_button_break"):
                 stop_button_clicked = True
