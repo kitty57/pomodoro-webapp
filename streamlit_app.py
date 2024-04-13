@@ -13,7 +13,7 @@ st.write("""
 Let's do some focus work in data science with this app.
 """)
 
-selected_time = st.selectbox("Select time duration for Pomodoro session:", [0.2,1, 5, 10, 15, 20, 25, 30])
+selected_time = st.selectbox("Select time duration for Pomodoro session:", [1, 5, 10, 15, 20, 25, 30])
 selected_time_seconds = selected_time * 60
 
 button_clicked = st.button("Start", key="start_button")
