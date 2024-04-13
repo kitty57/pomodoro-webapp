@@ -40,5 +40,5 @@ if button_clicked:
             time.sleep(1)
             break_time -= 1
             st.error("⏰ 5 minute break is over!")
-            if st.button("Stop",key="stop_button1"):
+            if st.button("i don't want break",key="stop_button_break"):
                 stop_button_clicked = True
