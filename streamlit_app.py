@@ -48,5 +48,5 @@ if button_clicked:
                 st.error("⏰ 5 minute break is over!")
                 time.sleep(2)  # Wait for 2 seconds before allowing to start another Pomodoro session
 
-    if stop_button_clicked:
+    if stop_checkbox:
         st.error("You gave up!")
