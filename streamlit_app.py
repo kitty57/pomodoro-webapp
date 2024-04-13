@@ -29,7 +29,7 @@ if button_clicked:
             st.header(f"⏳ {timer}")
             time.sleep(1)
             selected_time_seconds -= 1
-            if st.button("Stop"):
+            if st.button("Stop111"):
                 stop_button_clicked = True
         
         if not stop_button_clicked:
