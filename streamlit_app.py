@@ -6,9 +6,8 @@ def local_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("styles.css")
-
+st.title("# The Pomodoro App")
 st.caption("""
-# The Pomodoro App
 
 Let's do some focus work in data science with this app.
 """)
