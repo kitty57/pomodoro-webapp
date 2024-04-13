@@ -31,7 +31,7 @@ if button_clicked:
             time.sleep(1)
             selected_time_seconds -= 1
             st.success(f"🔔 {selected_time} minutes is over! Time for a break!")
-            if st.checkbox("Stop", key="stop_checkbox"):
+            if st.checkbox("Stop", key="abc"):
                 stop_button_clicked = True
     
     break_time = 5 * 60
@@ -43,5 +43,5 @@ if button_clicked:
             time.sleep(1)
             break_time -= 1
             st.error("⏰ 5 minute break is over!")
-            if st.checkbox("I don't want break", key="stop_checkbox_break"):
+            if st.checkbox("I don't want break", key="def"):
                 stop_button_clicked = True
