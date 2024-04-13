@@ -8,8 +8,7 @@ def local_css(file_name):
 local_css("styles.css")
 st.title("The Pomodoro App")
 st.caption("""
-
-Let's do some focus work in data science with this app.
+Helps you to focus and concentrate!!!
 """)
 
 selected_time = st.selectbox("Select time duration for Pomodoro session:", [1, 5, 10, 15, 20, 25, 30])
