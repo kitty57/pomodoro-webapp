@@ -13,14 +13,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.title {
+title {
     color: #333;
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.caption {
+caption {
     color: #666;
     text-align: center;
     font-size: 14px;
@@ -33,10 +33,10 @@ body {
     margin-bottom: 20px;
 }
 
-.success {
+success {
     color: green;
 }
 
-.error {
+error {
     color: red;
 }
