@@ -17,7 +17,7 @@ selected_time = st.selectbox("Select time duration for Pomodoro session:", [1, 5
 selected_time_seconds = selected_time * 60
 
 button_clicked = st.button("Start")
-stop_button_clicked = False
+stop_button_clicked = st.button("I give up!!1")
 
 if button_clicked:
     with st.empty():
@@ -40,5 +40,5 @@ if button_clicked:
             time.sleep(1)
             break_time -= 1
             st.error("⏰ 5 minute break is over!")
-            if st.button("Stop"):
+            if stop_button_clicked:
                 stop_button_clicked = True
